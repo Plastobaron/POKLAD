@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Stanoviště 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -20,25 +21,29 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         padding: 20px;
-        width: 100%;
-        max-width: 300px; /* Omezení šířky kontejneru */
+        width: 90%;
+        max-width: 400px;
         text-align: center;
     }
     h1 {
         color: #5a5a5a;
-        font-size: 1.2em; /* Menší nadpis na mobilech */
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.2em;
     }
     button {
         background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 5px;
-        padding: 10px 20px;
+        padding: 10px;
         margin-top: 10px;
         cursor: pointer;
-        width: 100%; /* Tlačítka na celou šířku */
-        box-sizing: border-box; /* Padding se nezapočítává do šířky */
+        width: 100%;
+        box-sizing: border-box;
         transition: background-color 0.3s;
+        font-size: 1em;
     }
     button:hover {
         background-color: #45a049;
@@ -46,23 +51,7 @@
     #result {
         margin-top: 20px;
         color: #d44;
-        font-size: 0.9em; /* Menší písmo pro zprávy */
-    }
-
-    /* Mediální dotazy pro úpravu na různé velikosti obrazovek */
-    @media (min-width: 600px) {
-        .container {
-            max-width: 500px; /* Větší šířka kontejneru pro desktop */
-        }
-        h1 {
-            font-size: 1.5em; /* Větší nadpis na desktopu */
-        }
-        button {
-            font-size: 1em; /* Větší písmo na tlačítkách pro desktop */
-        }
-        #result {
-            font-size: 1.1em; /* Větší písmo pro zprávy na desktopu */
-        }
+        font-size: 1em;
     }
 </style>
 </head>
@@ -80,7 +69,7 @@
 <script>
     function checkAnswer(answer) {
         if (answer === 'c') {
-            document.getElementById('result').innerHTML = 'Správně! zapiště si slovo "najdeš" a pokračujte k dalšímu stanovišti.';
+            document.getElementById('result').innerHTML = 'Správně! zapiš si slovo "najdeš" a pokračujte na další stanoviště.';
         } else {
             document.getElementById('result').innerHTML = 'Špatně, zkuste to znovu.';
         }
